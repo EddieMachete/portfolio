@@ -1,0 +1,32 @@
+{
+  "allowSyntheticDefaultImports": true,
+  "compileOnSave": true,
+  "compilerOptions": {
+    "baseUrl": ".",
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "lib": [
+      "dom",
+      "es6",
+      "es2017.object",
+    ],
+    "module": "es6",
+    "moduleResolution": "node",
+    "noEmitOnError": true,
+    "noImplicitAny": false,
+    "removeComments": false,
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "target": "es6",
+    "paths": {
+      "@ui/*": ["src/ui/*"],
+    },
+  },
+  "include": [
+    "src/**/*",
+  ],
+  "exclude": [
+    "node_modules",
+    "src/stories",
+  ]
+}
