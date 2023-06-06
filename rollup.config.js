@@ -7,7 +7,9 @@ import commonjs from '@rollup/plugin-commonjs';
 const dir = 'build';
 const tsconfig = {
   paths: {
+    "@data/*": ["src/data/*"],
     "@ui/*": ["src/ui/*"],
+    "@core/*": ["src/core/*"],
   }
 };
 

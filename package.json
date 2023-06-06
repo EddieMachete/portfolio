@@ -30,6 +30,7 @@
   "scripts": {
     "postbuild": "copyfiles ./assets/* ./assets/**/* ./build --up=1",
     "build": "rollup -c",
+    "build-styles": "style-dictionary build --config style-dictionary.config.json",
     "prebuild": "rimraf ./build",
     "start": "npm run build && http-server build/ -s -c-1 -p 44333",
     "test": "echo \"Error: no test specified\" && exit 1"

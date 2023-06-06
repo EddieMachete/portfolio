@@ -1,4 +1,4 @@
-{
+export default {
   "dimension": {
     "scale": {
       "value": "2",
@@ -575,4 +575,4 @@
       "type": "fontSizes"
     }
   }
-}
+};
