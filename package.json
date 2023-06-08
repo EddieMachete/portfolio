@@ -1,0 +1,40 @@
+{
+  "author": "Eduardo Echeverria",
+  "bugs": {
+    "url": "https://github.com/EddieMachete/portfolio/issues"
+  },
+  "dependencies": {
+    "lit": "^2.7.4",
+    "save-dev": "^0.0.1-security"
+  },
+  "description": "",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.2",
+    "@rollup/plugin-typescript": "^11.1.1",
+    "copyfiles": "^2.4.1",
+    "http-server": "^14.1.1",
+    "rimraf": "^5.0.1",
+    "rollup": "^3.22.0",
+    "tslib": "^2.5.3",
+    "typescript": "^5.0.4"
+  },
+  "homepage": "https://github.com/EddieMachete/portfolio#readme",
+  "license": "ISC",
+  "main": "index.html",
+  "name": "portfolio",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EddieMachete/portfolio.git"
+  },
+  "scripts": {
+    "postbuild": "copyfiles ./assets/* ./assets/**/* ./build --up=1 && npm run build-styles",
+    "build": "rollup -c",
+    "build-styles": "style-dictionary build --config style-dictionary.config.json",
+    "prebuild": "rimraf ./build",
+    "start": "npm run build && http-server build/ -s -c-1 -p 44333",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "version": "1.0.0"
+}
