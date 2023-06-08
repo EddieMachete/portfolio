@@ -10,6 +10,6 @@ export class EMTokenColorScale extends LitElement {
   `;
 
   render() {
-    return html`<div>Scale</div><slot></slot>`;
+    return html`<slot name="heading"></slot><slot></slot>`;
   }
 }
