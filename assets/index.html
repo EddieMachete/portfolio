@@ -19,6 +19,7 @@
     <title>Eduardo Echeverria :: UX Engineer Portfolio</title>
 
     <!-- Add any global styles for body, document, etc. -->
+    <link rel="stylesheet" href="css/_variables.css">
     <style>
       body {
         font-family: var(--theme-font-family, 'Segoe UI',Arial, sans-serif);
@@ -30,7 +31,6 @@
         box-shadow: 0 .25rem .5rem 0.0625rem rgba(0, 0, 0, 0.2);
       }
     </style>
-    <script src="./scripts/bundle.js"></script>
   </head>
   <body>
     <header>
@@ -125,7 +125,11 @@
       <em-card>Card 1</em-card>
     </section>
     <section>
-      <em-token-color-card>Card 1</em-token-color-card>
+      <em-token-color-card
+        description="${token.name}"
+        value="${token.value}"
+        style="--em-token-color-card-bg:var(--color-green-900);--em-token-color-card-color:var(--color-black);"></em-token-color-card>
     </section>
+    <script src="./scripts/bundle.js"></script>
   </body>
 </html>
